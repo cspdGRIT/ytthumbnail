@@ -20,3 +20,9 @@ Youtube thumbnail size is 1280x720 pixels
 The caption text is apt for the given script text
 The generated image is apt
 
+
+#RUN
+python3 fl.py
+
+flask app runs at localhost:5000 and 
+streamlit app runs at localhost:8501
