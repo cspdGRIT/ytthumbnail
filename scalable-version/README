@@ -1,0 +1,21 @@
+build:
+docker build -t thumbnail-app .
+
+run:
+docker run -d -p 80:80 thumbnail-app
+
+logs:
+docker ps -q | xargs -L 1 docker logs
+
+To remove all unused containers/images:
+
+docker system prune -a --volumes
+
+images:
+
+docker rmi -f $(docker images -aq)
+
+stop containers:
+
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
